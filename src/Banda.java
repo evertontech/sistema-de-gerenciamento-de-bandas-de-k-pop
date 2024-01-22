@@ -4,12 +4,9 @@ import java.util.List;
 public class Banda {
     private String nome;
     private String agencia;
-    private int anosDeEstreia;
-    private List<Membro>;
-    //private managerResponsavel Manager;
-    LocalDate dataAtual = LocalDate.now();
-    LocalDate dataEntrada = LocalDate.parse("2024-01-22");
-    int comparacao = dataEntrada.compareTo(dataAtual);
+    private int anoDeEstreia;
+    private List<Membro> listaDeMembros;
+    private Manager managerResponsavel;
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -27,25 +24,31 @@ public class Banda {
         return this.agencia;
     }
 
-    public void setAnosDeEstreia(int anosDeEstreia) {
-        if (comparacao < 0) {
-            this.anosDeEstreia = anosDeEstreia;
-        } else if (comparacao > 0) {
+    public void setAnoDeEstreia(int anoDeEstreia) {
+        int anoAtual = LocalDate.now().getYear();
+        if (anoAtual >= anoDeEstreia) {
+            this.anoDeEstreia = anoDeEstreia;
+        } else {
             System.out.println("O Ano de estreia da banda não pode ser um valor futuro.");
         }
-
     }
 
-    public int getAnosDeEstreia() {
-        return this.anosDeEstreia;
+    public int getAnoDeEstreia() {
+        return this.anoDeEstreia;
     }
 
-    public void setManager() {
-        this.manager;
+    public void setListaDeMembros(List<Membro> listaDeMembros) {
+        this.listaDeMembros = listaDeMembros;
     }
 
-    public int mediaIdadesMembros() {
-        return;
+    public List<Membro> getListaDeMembros() {
+        return this.listaDeMembros;
+    }
+
+    public void setManager(Manager managerResponsavel) {
+        this.managerResponsavel = managerResponsavel;
+    }
+
     }
 
     public String exibirInformacoesBanda() {

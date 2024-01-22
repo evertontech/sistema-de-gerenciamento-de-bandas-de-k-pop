@@ -3,7 +3,7 @@ public class Membro {
     private int idade;
     private String cargo;
     private float salario;
-    private boolean statusContrato;
+    private boolean contratado;
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -14,10 +14,10 @@ public class Membro {
     }
 
     public void setIdade(int idade) {
-        if (idade  > 0) {
+        if (idade > 0) {
             this.idade = idade;
         } else {
-            System.out.println("A idade precida ser maior que zero.");
+            System.out.println("A idade precisa ser maior do que zero.");
         }
     }
 
@@ -39,18 +39,17 @@ public class Membro {
         } else {
             System.out.println("O Salário não pode ser negativo.");
         }
-
     }
 
     public float getSalario() {
         return this.salario;
     }
 
-    public void setStatusContrato(boolean statusContrato) {
-        this.statusContrato = statusContrato;
+    public void setContratado(boolean contratado) {
+        this.contratado = contratado;
     }
 
-    public boolean getStatusContrato() {
-        return this.statusContrato;
+    public boolean isContratado() {
+        return this.contratado;
     }
 }

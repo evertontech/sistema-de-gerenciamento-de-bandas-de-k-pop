@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.List;
 
 public class Banda {
@@ -5,7 +6,10 @@ public class Banda {
     private String agencia;
     private int anosDeEstreia;
     private List<Membro>;
-    private managerResponsavel Manager;
+    //private managerResponsavel Manager;
+    LocalDate dataAtual = LocalDate.now();
+    LocalDate dataEntrada = LocalDate.parse("2024-01-22");
+    int comparacao = dataEntrada.compareTo(dataAtual);
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -24,9 +28,9 @@ public class Banda {
     }
 
     public void setAnosDeEstreia(int anosDeEstreia) {
-        if (anosDeEstreia) {
+        if (comparacao < 0) {
             this.anosDeEstreia = anosDeEstreia;
-        } else {
+        } else if (comparacao > 0) {
             System.out.println("O Ano de estreia da banda não pode ser um valor futuro.");
         }
 

@@ -18,7 +18,6 @@ public class Manager {
         } else {
             System.out.println("A idade precisa ser maior que zero.");
         }
-
     }
 
     public int getIdade() {
@@ -31,7 +30,6 @@ public class Manager {
         } else {
             System.out.println("O Salário não pode ser negativo.");
         }
-
     }
 
     public float getSalario() {

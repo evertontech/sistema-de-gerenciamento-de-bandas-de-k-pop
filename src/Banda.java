@@ -49,6 +49,14 @@ public class Banda {
         this.managerResponsavel = managerResponsavel;
     }
 
+    public float mediaIdadesMembros() {
+        int soma = 0;
+
+        for (Membro membro : listaDeMembros) {
+            soma = soma + membro.getIdade();
+        }
+
+        return (float) soma / listaDeMembros.size();
     }
 
     public String exibirInformacoesBanda() {

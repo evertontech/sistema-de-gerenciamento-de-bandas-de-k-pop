@@ -5,6 +5,14 @@ public class Membro {
     private float salario;
     private boolean contratado;
 
+    public Membro(String nome, int idade, String cargo, float salario, boolean contratado) {
+        this.setNome(nome);
+        this.setIdade(idade);
+        this.setCargo(cargo);
+        this.setSalario(salario);
+        this.setContratado(contratado);
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }

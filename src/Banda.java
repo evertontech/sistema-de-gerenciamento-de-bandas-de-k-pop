@@ -60,7 +60,7 @@ public class Banda {
         this.listaDeMembros.add(membroParaAdicionar);
     }
 
-    public float mediaIdadesMembros() {
+    public float calcularMediaDeIdadeDosMembros() {
         int soma = 0;
 
         for (Membro membro : listaDeMembros) {

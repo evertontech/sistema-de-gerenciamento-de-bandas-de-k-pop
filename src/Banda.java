@@ -66,7 +66,11 @@ public class Banda {
         return (float) soma / listaDeMembros.size();
     }
 
-    public String exibirInformacoesBanda() {
-
+    public void exibirTodasAsInformacoes() {
+        System.out.println(nome);
+        System.out.println(agencia);
+        System.out.println(anoDeEstreia);
+        System.out.println(listaDeMembros);
+        managerResponsavel.exibirInformacoes();
     }
 }

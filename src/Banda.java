@@ -56,6 +56,10 @@ public class Banda {
         this.managerResponsavel = managerResponsavel;
     }
 
+    public void adicionarMembro(Membro membroParaAdicionar) {
+        this.listaDeMembros.add(membroParaAdicionar);
+    }
+
     public float mediaIdadesMembros() {
         int soma = 0;
 

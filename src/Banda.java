@@ -8,6 +8,13 @@ public class Banda {
     private List<Membro> listaDeMembros;
     private Manager managerResponsavel;
 
+    public Banda(String nome, String agencia, int anoDeEstreia, Manager managerResponsavel) {
+        this.setNome(nome);
+        this.setAgencia(agencia);
+        this.setAnoDeEstreia(anoDeEstreia);
+        this.setManager(managerResponsavel);
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -26,7 +33,7 @@ public class Banda {
 
     public void setAnoDeEstreia(int anoDeEstreia) {
         int anoAtual = LocalDate.now().getYear();
-        if (anoAtual >= anoDeEstreia) {
+        if (anoDeEstreia <= anoAtual) {
             this.anoDeEstreia = anoDeEstreia;
         } else {
             System.out.println("O Ano de estreia da banda não pode ser um valor futuro.");

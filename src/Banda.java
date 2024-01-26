@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Banda {
@@ -13,6 +14,7 @@ public class Banda {
         this.setAgencia(agencia);
         this.setAnoDeEstreia(anoDeEstreia);
         this.setManager(managerResponsavel);
+        this.listaDeMembros = new ArrayList<>();
     }
 
     public void setNome(String nome) {
@@ -56,6 +58,10 @@ public class Banda {
         this.managerResponsavel = managerResponsavel;
     }
 
+    public Manager getManagerResponsavel() {
+        return this.managerResponsavel;
+    }
+
     public void adicionarMembro(Membro membroParaAdicionar) {
         this.listaDeMembros.add(membroParaAdicionar);
     }
@@ -71,9 +77,14 @@ public class Banda {
     }
 
     public void exibirTodasAsInformacoes() {
-        System.out.println(nome);
-        System.out.println(agencia);
-        System.out.println(anoDeEstreia);
-        System.out.println(listaDeMembros);
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("Agência: "+ this.getAgencia());
+        System.out.println("Ano de estréia: " + this.getAnoDeEstreia());
+        System.out.println("Nome do manager: " + this.getManagerResponsavel().getNome());
+
+        System.out.println("Lista de membros:");
+        for (Membro membro : this.getListaDeMembros()) {
+            System.out.println(membro.getNome());
+        }
     }
 }

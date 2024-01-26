@@ -50,8 +50,4 @@ public class Manager {
     public int getAnosDeExperiencia() {
         return this.anosDeExperiencia;
     }
-
-    public void exibirInformacoes() {
-        System.out.println("Olá mundo");
-    }
 }

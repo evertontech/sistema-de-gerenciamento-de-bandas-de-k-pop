@@ -75,6 +75,5 @@ public class Banda {
         System.out.println(agencia);
         System.out.println(anoDeEstreia);
         System.out.println(listaDeMembros);
-        managerResponsavel.exibirInformacoes();
     }
 }

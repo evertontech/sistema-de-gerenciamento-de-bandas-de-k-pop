@@ -2,7 +2,14 @@ public class Manager {
     private String nome;
     private int idade;
     private float salario;
-    private int anosExperiencia;
+    private int anosDeExperiencia;
+
+    public Manager(String nome, int idade, float salario, int anosDeExperiencia) {
+        this.setNome(nome);
+        this.setIdade(idade);
+        this.setSalario(salario);
+        this.setAnosDeExperiencia(anosDeExperiencia);
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -36,11 +43,15 @@ public class Manager {
         return this.salario;
     }
 
-    public void setAnosExperiencia(int anosExperiencia) {
-        this.anosExperiencia = anosExperiencia;
+    public void setAnosDeExperiencia(int anosDeExperiencia) {
+        this.anosDeExperiencia = anosDeExperiencia;
     }
 
-    public int getAnosExperiencia() {
-        return this.anosExperiencia;
+    public int getAnosDeExperiencia() {
+        return this.anosDeExperiencia;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Olá mundo");
     }
 }
